@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.4.1
+
+- Fixing inconsistency between dense & sparse modularity.
+
 ## 2.4.0
 
 - Adding `node/clusteringAmbiguity`.
