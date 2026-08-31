@@ -608,4 +608,17 @@ describe('modularity', function () {
       modularity.sparse(directedGraph, {resolution: 2})
     );
   });
+
+  it('sparse and dense modularity should agree on self-loops.', function () {
+    var graph = new UndirectedGraph();
+    ['a', 'b', 'c'].forEach(function (n) {
+      graph.addNode(n, {community: 0});
+    });
+    graph.addEdge('a', 'b');
+    graph.addEdge('b', 'c');
+    graph.addEdge('a', 'c');
+    graph.addEdge('a', 'a');
+
+    closeTo(modularity.dense(graph), modularity.sparse(graph));
+  });
 });
