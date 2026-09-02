@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.4.2
+
+- Fixing `centrality/hits` convergence issues.
+
 ## 2.4.1
 
 - Fixing inconsistency between dense & sparse modularity.
